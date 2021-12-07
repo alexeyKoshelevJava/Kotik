@@ -27,6 +27,7 @@ public class Kotik {
 
     public boolean play() {
         if (isTheCatFull()) {
+            System.out.println("Котик играет");
             satiety--;
             return true;
         } else return false;
@@ -35,6 +36,7 @@ public class Kotik {
 
     public boolean sleep() {
         if (isTheCatFull()) {
+            System.out.println("Котик спит");
             satiety--;
             return true;
         } else return false;
@@ -42,6 +44,7 @@ public class Kotik {
 
     public boolean walk() {
         if (isTheCatFull()) {
+            System.out.println("Котик гуляет");
             satiety--;
             return true;
         } else return false;
@@ -49,6 +52,7 @@ public class Kotik {
 
     public boolean hunt() {
         if (isTheCatFull()) {
+            System.out.println("Котик охотится");
             satiety--;
             return true;
         } else return false;
@@ -56,6 +60,7 @@ public class Kotik {
 
     public boolean wash() {
         if (isTheCatFull()) {
+            System.out.println("Котик моется");
             satiety--;
             return true;
         } else return false;
@@ -73,15 +78,16 @@ public class Kotik {
 
     }
 
-    public String eat(int satiety, String foodName) {
+    public void eat(int satiety, String foodName) {
         this.satiety += satiety;
-        return ("Котик съел: " + foodName + " satiety= " + this.satiety);
+        System.out.println("Котик ел: " + foodName);
+
     }
 
-    public String eat() {
+    public void eat() {
         int countSatiety = 1;
         String food = "fish";
-        return eat(countSatiety, food);
+        eat(1, food);
 
     }
 
@@ -96,42 +102,42 @@ public class Kotik {
             switch (methodNumber) {
                 case 1:
                     if (play()) {
-                        action[i] = i + " играл";
+                        action[i] = i + "- играл";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + " ел";
+                        action[i] = i + "- ел";
                     }
                     break;
                 case 2:
                     if (sleep()) {
-                        action[i] = i + " спал";
+                        action[i] = i + "- спал";
                     } else {
                         eat(countFood);
-                        action[i] = i + " ел";
+                        action[i] = i + "- ел";
                     }
                     break;
                 case 3:
                     if (walk()) {
-                        action[i] = i + " гулял";
+                        action[i] = i + "- гулял";
                     } else {
                         eat();
-                        action[i] = i + " ел";
+                        action[i] = i + "- ел";
                     }
                     break;
                 case 4:
                     if (hunt()) {
-                        action[i] = i + " охотился";
+                        action[i] = i + "- охотился";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + " ел";
+                        action[i] = i + "- ел";
                     }
                     break;
                 case 5:
                     if (wash()) {
-                        action[i] = i + " мылся";
+                        action[i] = i + "- мылся";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + " ел";
+                        action[i] = i + "- ел";
                     }
                     break;
             }
