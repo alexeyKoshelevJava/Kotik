@@ -102,42 +102,42 @@ public class Kotik {
             switch (methodNumber) {
                 case 1:
                     if (play()) {
-                        action[i] = i + "- играл";
+                        action[i] = i + " - играл";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + "- ел";
+                        action[i] = i + " - ел";
                     }
                     break;
                 case 2:
                     if (sleep()) {
-                        action[i] = i + "- спал";
+                        action[i] = i + " - спал";
                     } else {
                         eat(countFood);
-                        action[i] = i + "- ел";
+                        action[i] = i + " - ел";
                     }
                     break;
                 case 3:
                     if (walk()) {
-                        action[i] = i + "- гулял";
+                        action[i] = i + " - гулял";
                     } else {
                         eat();
-                        action[i] = i + "- ел";
+                        action[i] = i + " - ел";
                     }
                     break;
                 case 4:
                     if (hunt()) {
-                        action[i] = i + "- охотился";
+                        action[i] = i + " - охотился";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + "- ел";
+                        action[i] = i + " - ел";
                     }
                     break;
                 case 5:
                     if (wash()) {
-                        action[i] = i + "- мылся";
+                        action[i] = i + " - мылся";
                     } else {
                         eat(countFood, food[randomFood - 1]);
-                        action[i] = i + "- ел";
+                        action[i] = i + " - ел";
                     }
                     break;
             }
