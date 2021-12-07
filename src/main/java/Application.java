@@ -10,8 +10,7 @@ public class Application {
         kotik2.setSatiety(2);
         kotik2.setWeight(3);
 
-        System.out.println(Kotik.getCount());
-
+        
         String[] actionList = kotik1.liveAnotherDay();
         for (String action : actionList) {
             System.out.println(action);

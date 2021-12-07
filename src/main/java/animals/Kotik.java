@@ -27,7 +27,6 @@ public class Kotik {
 
     public boolean play() {
         if (isTheCatFull()) {
-            System.out.println("Котик играет");
             satiety--;
             return true;
         } else return false;
@@ -36,7 +35,6 @@ public class Kotik {
 
     public boolean sleep() {
         if (isTheCatFull()) {
-            System.out.println("Котик спит");
             satiety--;
             return true;
         } else return false;
@@ -44,7 +42,6 @@ public class Kotik {
 
     public boolean walk() {
         if (isTheCatFull()) {
-            System.out.println("Котик гуляет");
             satiety--;
             return true;
         } else return false;
@@ -52,7 +49,6 @@ public class Kotik {
 
     public boolean hunt() {
         if (isTheCatFull()) {
-            System.out.println("Котик охотиться");
             satiety--;
             return true;
         } else return false;
@@ -60,7 +56,6 @@ public class Kotik {
 
     public boolean wash() {
         if (isTheCatFull()) {
-            System.out.println("Котик моется");
             satiety--;
             return true;
         } else return false;
@@ -68,7 +63,6 @@ public class Kotik {
 
     public boolean isTheCatFull() {
         if (satiety <= 0) {
-            System.out.println("Котик хочет есть");
             return false;
         } else return true;
     }
@@ -96,7 +90,6 @@ public class Kotik {
         String[] food = {"fish", "Meet", "Milk", "Chicken", "sour cream"};
         for (int i = 0; i < action.length; i++) {
             int methodNumber = (int) (Math.random() * METHODS) + 1;
-            System.out.println(methodNumber);
             int randomFood = (int) (Math.random() * food.length) + 1;
             int countFood = (int) (Math.random() * 3) + 1;
 
