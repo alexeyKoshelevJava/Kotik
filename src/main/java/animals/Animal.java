@@ -5,12 +5,7 @@ import food.Food;
 
 public abstract class Animal {
 
-  public int satiety;
-
-    public Animal(int satiety) {
-
-        this.satiety = satiety;
-    }
+    protected int satiety;
 
 
     public int getSatiety() {

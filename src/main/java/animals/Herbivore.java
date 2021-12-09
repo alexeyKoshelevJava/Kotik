@@ -6,9 +6,8 @@ import food.Grass;
 
 
 public abstract class Herbivore extends Animal {
-    public Herbivore(int satiety) {
-        super(satiety);
-    }
+
+
 
     @Override
     public void eat(Food food) {

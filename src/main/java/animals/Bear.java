@@ -1,10 +1,7 @@
 package animals;
 
 public class Bear extends Carnivorous implements Run, Swim, Voice {
-    
-    public Bear(int satiety) {
-        super(satiety);
-    }
+
 
     @Override
     public void run() {

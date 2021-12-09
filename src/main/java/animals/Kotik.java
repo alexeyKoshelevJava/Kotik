@@ -9,12 +9,6 @@ public class Kotik extends Carnivorous implements Run, Voice {
     private static final int METHODS = 5;
 
 
-    public Kotik(int satiety) {
-        super(satiety);
-        createKotic();
-    }
-
-
     public void createKotic() {
         count++;
     }

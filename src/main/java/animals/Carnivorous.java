@@ -6,10 +6,6 @@ import food.Meat;
 public abstract class Carnivorous extends Animal {
 
 
-    public Carnivorous(int satiety) {
-        super(satiety);
-    }
-
     @Override
     public void eat(Food food) {
         if (food instanceof Meat) {
