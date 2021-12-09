@@ -1,8 +1,5 @@
 import animals.*;
-import employee.Worker;
-import food.Food;
-import food.Grass;
-import food.Meat;
+
 
 public class Zoo {
     public static void main(String[] args) {

@@ -5,7 +5,7 @@ import food.Food;
 
 public abstract class Animal {
 
-   protected int satiety;
+  public int satiety;
 
     public Animal(int satiety) {
 
