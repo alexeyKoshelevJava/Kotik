@@ -1,6 +1,8 @@
 package animals;
 
 public class Duck extends Herbivore implements Fly, Run, Swim, Voice {
+
+
     public Duck(int satiety) {
         super(satiety);
     }
