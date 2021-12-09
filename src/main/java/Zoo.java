@@ -1,5 +1,7 @@
 import animals.*;
 import employee.Worker;
+import food.Food;
+import food.Grass;
 import food.Meat;
 
 public class Zoo {
@@ -18,6 +20,7 @@ public class Zoo {
         swims[2] = new Bear("Белый медведь", 0);
         swims[3] = new Deer("Олень", 0);
         return swims;
+
 
     }
 

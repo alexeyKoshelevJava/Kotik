@@ -3,9 +3,6 @@ package food;
 public class Meat extends Food {
 
 
-    public Meat(String nameFood) {
-        super(nameFood);
-    }
 
     @Override
     public int getEnergy() {
@@ -13,10 +10,5 @@ public class Meat extends Food {
     }
 
 
-    @Override
-    public String toString() {
-        return "Meat{" +
-                "nameMeet='" + nameFood + '\'' +
-                '}';
-    }
+
 }
