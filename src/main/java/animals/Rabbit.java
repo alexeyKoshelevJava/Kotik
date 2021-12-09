@@ -1,8 +1,8 @@
 package animals;
 
 public class Rabbit extends Herbivore implements Run {
-    public Rabbit(String name, int satiety) {
-        super(name, satiety);
+    public Rabbit(int satiety) {
+        super(satiety);
     }
 
     @Override

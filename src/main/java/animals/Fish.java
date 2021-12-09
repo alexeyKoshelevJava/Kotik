@@ -3,8 +3,8 @@ package animals;
 public class Fish extends Carnivorous implements Swim {
 
 
-    public Fish(String name, int satiety) {
-        super(name, satiety);
+    public Fish(int satiety) {
+        super(satiety);
     }
 
     @Override

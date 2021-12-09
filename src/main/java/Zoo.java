@@ -15,10 +15,10 @@ public class Zoo {
 
     public static Swim[] createPond() {
         Swim[] swims = new Swim[4];
-        swims[0] = new Fish("Щука", 0);
-        swims[1] = new Duck("Домашняя утка", 0);
-        swims[2] = new Bear("Белый медведь", 0);
-        swims[3] = new Deer("Олень", 0);
+        swims[0] = new Fish( 0);
+        swims[1] = new Duck( 0);
+        swims[2] = new Bear( 0);
+        swims[3] = new Deer( 0);
         return swims;
 
 

@@ -4,21 +4,14 @@ import food.Food;
 
 
 public abstract class Animal {
-    protected String name;
+
     protected int satiety;
 
-    public Animal(String name, int satiety) {
-        this.name = name;
+    public Animal(int satiety) {
+
         this.satiety = satiety;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public int getSatiety() {
         return satiety;

@@ -1,8 +1,8 @@
 package animals;
 
 public class Deer extends Herbivore implements Run, Swim, Voice {
-    public Deer(String name, int satiety) {
-        super(name, satiety);
+    public Deer(int satiety) {
+        super(satiety);
     }
 
     @Override

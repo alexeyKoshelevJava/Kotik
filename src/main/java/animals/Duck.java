@@ -1,8 +1,8 @@
 package animals;
 
 public class Duck extends Herbivore implements Fly, Run, Swim, Voice {
-    public Duck(String name, int satiety) {
-        super(name, satiety);
+    public Duck(int satiety) {
+        super(satiety);
     }
 
     @Override

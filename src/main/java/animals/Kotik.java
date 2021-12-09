@@ -2,7 +2,6 @@ package animals;
 
 import food.Food;
 
-
 public class Kotik extends Carnivorous implements Run, Voice {
 
 
@@ -10,8 +9,8 @@ public class Kotik extends Carnivorous implements Run, Voice {
     private static final int METHODS = 5;
 
 
-    public Kotik(String name, int satiety) {
-        super(name, satiety);
+    public Kotik(int satiety) {
+        super(satiety);
         createKotic();
     }
 
@@ -120,13 +119,6 @@ public class Kotik extends Carnivorous implements Run, Voice {
         return action;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getVoice() {
         return "мяу-мяу";
