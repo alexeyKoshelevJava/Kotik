@@ -1,24 +1,19 @@
 package animals;
 
-public class Kotik {
-    private String name;
-    private String voice;
-    private int satiety;
-    private int weight;
+import food.Food;
+import food.WrongFoodException;
+import model.Size;
+
+public class Kotik extends Carnivorous implements Run, Voice {
+
+
     private static int count = 0;
     private static final int METHODS = 5;
 
-    public Kotik() {
-        createKotic();
+    public Kotik(String name) {
+        super(name);
     }
 
-    public Kotik(String name, String voice, int satiety, int weight) {
-        this.name = name;
-        this.voice = voice;
-        this.satiety = satiety;
-        this.weight = weight;
-        createKotic();
-    }
 
     public void createKotic() {
         count++;
@@ -72,39 +67,22 @@ public class Kotik {
         } else return true;
     }
 
-    public void eat(int satiety) {
-        this.satiety += satiety;
 
-
-    }
-
-    public void eat(int satiety, String foodName) {
-        this.satiety += satiety;
-        System.out.println("Котик ел: " + foodName);
-
-    }
-
-    public void eat() {
-        int countSatiety = 1;
-        String food = "fish";
-        eat(1, food);
-
-    }
-
-    public String[] liveAnotherDay() {
+    public String[] liveAnotherDay(Food food) {
         String[] action = new String[24];
-        String[] food = {"fish", "Meet", "Milk", "Chicken", "sour cream"};
         for (int i = 0; i < action.length; i++) {
             int methodNumber = (int) (Math.random() * METHODS) + 1;
-            int randomFood = (int) (Math.random() * food.length) + 1;
-            int countFood = (int) (Math.random() * 3) + 1;
 
             switch (methodNumber) {
                 case 1:
                     if (play()) {
                         action[i] = i + " - играл";
                     } else {
-                        eat(countFood, food[randomFood - 1]);
+                        try {
+                            eat(food);
+                        } catch (WrongFoodException e) {
+                            e.printStackTrace();
+                        }
                         action[i] = i + " - ел";
                     }
                     break;
@@ -112,7 +90,11 @@ public class Kotik {
                     if (sleep()) {
                         action[i] = i + " - спал";
                     } else {
-                        eat(countFood);
+                        try {
+                            eat(food);
+                        } catch (WrongFoodException e) {
+                            e.printStackTrace();
+                        }
                         action[i] = i + " - ел";
                     }
                     break;
@@ -120,7 +102,11 @@ public class Kotik {
                     if (walk()) {
                         action[i] = i + " - гулял";
                     } else {
-                        eat();
+                        try {
+                            eat(food);
+                        } catch (WrongFoodException e) {
+                            e.printStackTrace();
+                        }
                         action[i] = i + " - ел";
                     }
                     break;
@@ -128,7 +114,11 @@ public class Kotik {
                     if (hunt()) {
                         action[i] = i + " - охотился";
                     } else {
-                        eat(countFood, food[randomFood - 1]);
+                        try {
+                            eat(food);
+                        } catch (WrongFoodException e) {
+                            e.printStackTrace();
+                        }
                         action[i] = i + " - ел";
                     }
                     break;
@@ -136,7 +126,11 @@ public class Kotik {
                     if (wash()) {
                         action[i] = i + " - мылся";
                     } else {
-                        eat(countFood, food[randomFood - 1]);
+                        try {
+                            eat(food);
+                        } catch (WrongFoodException e) {
+                            e.printStackTrace();
+                        }
                         action[i] = i + " - ел";
                     }
                     break;
@@ -145,21 +139,11 @@ public class Kotik {
         return action;
     }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
 
     public String getVoice() {
-        return voice;
+        return "мяу-мяу";
     }
 
-    public void setVoice(String voice) {
-        this.voice = voice;
-    }
 
     public int getSatiety() {
         return satiety;
@@ -169,15 +153,17 @@ public class Kotik {
         this.satiety = satiety;
     }
 
-    public int getWeight() {
-        return weight;
-    }
-
-    public void setWeight(int weight) {
-        this.weight = weight;
+    @Override
+    public Size getSize() {
+        return Size.SMALL;
     }
 
     public static int getCount() {
         return count;
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Котик бежит совсем неслышно");
     }
 }
