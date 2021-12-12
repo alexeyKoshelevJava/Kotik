@@ -7,7 +7,7 @@ import java.util.Map;
 
 public class Aviary<T extends Animal> {
     private Size size;
-    private Map<String, T> mapAmimals = new HashMap<>();
+    private Map<String, T> aviaryMap = new HashMap<>();
 
     public Aviary(Size size) {
         this.size = size;
@@ -17,7 +17,7 @@ public class Aviary<T extends Animal> {
     public void addAnimal(T animal) {
 
         if (this.size == animal.getSize()) {
-            mapAmimals.put(animal.getName(), animal);
+            aviaryMap.put(animal.getName(), animal);
         } else {
             throw new WrongSizeException();
         }
@@ -26,13 +26,13 @@ public class Aviary<T extends Animal> {
     }
 
     public T getAnimal(String name) {
-        return mapAmimals.get(name);
+        return aviaryMap.get(name);
 
     }
 
     public boolean removeAnimal(String name) {
-        if (mapAmimals.containsKey(name)) {
-            mapAmimals.remove(name);
+        if (aviaryMap.containsKey(name)) {
+            aviaryMap.remove(name);
             return true;
         } else {
             return false;
@@ -50,10 +50,10 @@ public class Aviary<T extends Animal> {
     }
 
     public Map<String, T> getMapAmimals() {
-        return mapAmimals;
+        return aviaryMap;
     }
 
     public void setMapAmimals(Map<String, T> mapAmimals) {
-        this.mapAmimals = mapAmimals;
+        this.aviaryMap = mapAmimals;
     }
 }

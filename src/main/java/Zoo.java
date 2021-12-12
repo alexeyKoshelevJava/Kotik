@@ -1,41 +1,38 @@
 import animals.*;
-import employee.Worker;
-import food.Food;
-import food.Grass;
-import food.Meat;
+
 import model.Aviary;
 import model.Size;
 
 
 public class Zoo {
-    Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
-    Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.SMALL);
+    private static Aviary<Carnivorous> carnivorousAviary = new Aviary<>(Size.LARGE);
+    private static Aviary<Herbivore> herbivoreAviary = new Aviary<>(Size.SMALL);
 
 
-    public static void fillCarnivorousAviary(Aviary<Carnivorous> aviary) {
-       
-        aviary.addAnimal(new Bear("Белый медведь"));
-        aviary.addAnimal(new Kotik("Персидский котик"));
-        aviary.addAnimal(new Fish("Щука"));
+    public static void fillCarnivorousAviary() {
 
-
-    }
-
-    public static void fillHerbivoreAviary(Aviary<Herbivore> aviary) {
-
-        aviary.addAnimal(new Duck("утка восточноевропейская"));
-        aviary.addAnimal(new Rabbit("Белый кролик"));
-
-    }
-
-    public static Carnivorous getCarnivorous(Aviary<Carnivorous> aviary, String name) {
-        return aviary.getAnimal(name);
+        carnivorousAviary.addAnimal(new Bear("Белый медведь"));
+        carnivorousAviary.addAnimal(new Kotik("Персидский котик"));
+        carnivorousAviary.addAnimal(new Fish("Щука"));
 
 
     }
 
-    public static Herbivore getHerbivore(Aviary<Herbivore> aviary, String name) {
-        return aviary.getAnimal(name);
+    public static void fillHerbivoreAviary() {
+
+        herbivoreAviary.addAnimal(new Duck("утка восточноевропейская"));
+        herbivoreAviary.addAnimal(new Rabbit("Белый кролик"));
+
+    }
+
+    public static Carnivorous getCarnivorous(String name) {
+        return carnivorousAviary.getAnimal(name);
+
+
+    }
+
+    public static Herbivore getHerbivore(String name) {
+        return herbivoreAviary.getAnimal(name);
 
     }
 
