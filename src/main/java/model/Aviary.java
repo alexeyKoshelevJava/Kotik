@@ -53,7 +53,7 @@ public class Aviary<T extends Animal> {
         return aviaryMap;
     }
 
-    public void setMapAmimals(Map<String, T> mapAmimals) {
-        this.aviaryMap = mapAmimals;
+    public void setAviaryMap(HashMap<String, T> aviaryMap) {
+        this.aviaryMap = aviaryMap;
     }
 }
