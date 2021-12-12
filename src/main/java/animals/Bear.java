@@ -1,7 +1,13 @@
 package animals;
 
+import model.Size;
+
 public class Bear extends Carnivorous implements Run, Swim, Voice {
 
+
+    public Bear(String name) {
+        super(name);
+    }
 
     @Override
     public void run() {
@@ -21,4 +27,8 @@ public class Bear extends Carnivorous implements Run, Swim, Voice {
     }
 
 
+    @Override
+    public Size getSize() {
+        return Size.LARGE;
+    }
 }

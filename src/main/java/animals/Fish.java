@@ -1,7 +1,13 @@
 package animals;
 
+import model.Size;
+
 public class Fish extends Carnivorous implements Swim {
 
+
+    public Fish(String name) {
+        super(name);
+    }
 
     @Override
     public void swim() {
@@ -9,4 +15,8 @@ public class Fish extends Carnivorous implements Swim {
     }
 
 
+    @Override
+    public Size getSize() {
+        return Size.MEDIUM;
+    }
 }

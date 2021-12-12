@@ -1,7 +1,13 @@
 package animals;
 
+import model.Size;
+
 public class Deer extends Herbivore implements Run, Swim, Voice {
 
+
+    public Deer(String name) {
+        super(name);
+    }
 
     @Override
     public void run() {
@@ -16,5 +22,10 @@ public class Deer extends Herbivore implements Run, Swim, Voice {
     @Override
     public String getVoice() {
         return "УУУУУУУ трубит";
+    }
+
+    @Override
+    public Size getSize() {
+        return Size.LARGE;
     }
 }
